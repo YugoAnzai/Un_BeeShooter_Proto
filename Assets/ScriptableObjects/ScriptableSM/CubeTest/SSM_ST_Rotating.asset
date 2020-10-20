@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf6049e74cc5d74394a53bff321ddfe, type: 3}
+  m_Name: SSM_ST_Rotating
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 824b6b5515975aa45be19b4eeb5de7e8, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: c50210772111715488890904e964e9fb, type: 2}
+    trueState: {fileID: 11400000, guid: f38568e6d08d88b4db3c0c30ef441ae4, type: 2}
+    falseState: {fileID: 11400000, guid: 95cf6dfaa6ebc2e46a933f3ce7e84e2e, type: 2}
+  - decision: {fileID: 11400000, guid: 18f4393f9e6f61947b8b09e6170ff65b, type: 2}
+    trueState: {fileID: 11400000, guid: 1872c36d08d4ab84a8655766a8c12507, type: 2}
+    falseState: {fileID: 11400000, guid: 95cf6dfaa6ebc2e46a933f3ce7e84e2e, type: 2}
+  sceneGizmoColor: {r: 0.9056604, g: 0.12388753, b: 0.12388753, a: 1}
