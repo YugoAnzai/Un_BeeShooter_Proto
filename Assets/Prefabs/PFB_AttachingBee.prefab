@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 694047160309047794}
   - component: {fileID: 694047160309047793}
-  m_Layer: 0
-  m_Name: AttachingBee
+  m_Layer: 11
+  m_Name: PFB_AttachingBee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 694047160982156612}
   - component: {fileID: 694047160982156618}
   - component: {fileID: 694047160982156619}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

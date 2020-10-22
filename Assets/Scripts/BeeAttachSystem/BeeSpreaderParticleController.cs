@@ -29,11 +29,15 @@ public class BeeSpreaderParticleController : MonoBehaviour
 
         foreach(ParticleCollisionEvent colEvent in _collisionEvents)
         {
-            CreateAttachingBee(
+            
+            AttachingBee bee = CreateAttachingBee(
                 colEvent.intersection,
                 colEvent.normal,
                 beeAttachable.GetBeeHolder()
             );
+
+            bee.AttachToRigidBody(beeAttachable.Rb);
+
         }
 
     }

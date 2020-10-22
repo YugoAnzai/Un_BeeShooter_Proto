@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 566256615547959069}
   - component: {fileID: 566256615547959070}
   - component: {fileID: 566256615547959067}
+  - component: {fileID: 7616049251981156108}
   m_Layer: 9
-  m_Name: BeeTestCube
+  m_Name: PFB_BeeTestCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beesHolder: {fileID: 0}
+--- !u!54 &7616049251981156108
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566256615547959136}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
