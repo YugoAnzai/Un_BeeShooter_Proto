@@ -8,7 +8,7 @@ public class StingGun : GunBase
 
     protected override void ShootEffect()
     {
-
+        
         Vector3 dir = muzzle.forward;
         Debug.DrawRay(muzzle.position, dir * range, Color.red, .4f);
         RaycastHit hit;

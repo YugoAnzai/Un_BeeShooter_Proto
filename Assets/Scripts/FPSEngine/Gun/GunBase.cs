@@ -107,11 +107,15 @@ public abstract class GunBase : MonoBehaviour
         _curAmmo--;
 
         _candencyCounter = candencyDelay;
+
         ShootEffect();
 
     }
 
-    protected abstract void ShootEffect();
+    protected virtual void ShootEffect()
+    {
+        
+    }
 
     public virtual void EndShoot()
     {
