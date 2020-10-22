@@ -17,6 +17,7 @@ public class BeeAttachable : MonoBehaviour
         }
     }
 
-    public Transform GetBeeHolder() => beesHolder ?? transform;
+    public Transform GetBeeHolder() => 
+        beesHolder != null ? beesHolder : transform;
 
 }

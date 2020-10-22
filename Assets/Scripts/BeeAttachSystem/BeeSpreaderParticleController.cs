@@ -29,7 +29,7 @@ public class BeeSpreaderParticleController : MonoBehaviour
 
         foreach(ParticleCollisionEvent colEvent in _collisionEvents)
         {
-            
+
             AttachingBee bee = CreateAttachingBee(
                 colEvent.intersection,
                 colEvent.normal,
@@ -42,10 +42,10 @@ public class BeeSpreaderParticleController : MonoBehaviour
 
     }
 
-    private AttachingBee CreateAttachingBee(Vector3 position, Vector3 normal, Transform parent)
+    private AttachingBee CreateAttachingBee(Vector3 position, Vector3 normal, Transform beeParent)
     {
 
-        GameObject obj = Instantiate(beePrefab, position, Quaternion.identity, parent);
+        GameObject obj = Instantiate(beePrefab, position, Quaternion.identity, beeParent);
 
         obj.transform.forward = - normal;
 
