@@ -264,6 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 947559238840407552}
+  - component: {fileID: 3198669853780444630}
   m_Layer: 0
   m_Name: WeaponPlace
   m_TagString: Untagged
@@ -286,6 +287,19 @@ Transform:
   m_Father: {fileID: 947559236971460059}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3198669853780444630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947559238840407553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1dff4f35ad3da344bc362aee08dea9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns: []
 --- !u!1 &947559238857551359
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +349,6 @@ MonoBehaviour:
   mainCamera: {fileID: 947559238094178393}
   weaponCamera: {fileID: 947559237087286937}
   cameraPosition: {fileID: 947559236971460059}
-  weaponPosition: {fileID: 947559238840407552}
   mouseSensitivity: 2.4
   playerSpeed: 5
   runningSpeed: 10

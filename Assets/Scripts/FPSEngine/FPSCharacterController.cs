@@ -13,7 +13,6 @@ public class FPSCharacterController : MonoBehaviour
     public Camera weaponCamera;
     
     public Transform cameraPosition;
-    public Transform weaponPosition;
     
     [Header("Control Settings")]
     public float mouseSensitivity = 100.0f;
@@ -40,8 +39,6 @@ public class FPSCharacterController : MonoBehaviour
 
     public bool Grounded => _grounded;
 
-    Dictionary<int, int> m_AmmoInventory = new Dictionary<int, int>();
-    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
