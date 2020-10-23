@@ -7,11 +7,15 @@ public class GunOperator : MonoBehaviour
     public List<GunBase> guns;
 
     private GunBase _equippedGun;
+    private int _gunIndex;
 
     private void Start()
     {
-        if (guns.Count > 0)
-            EquipGun(guns[0]);
+
+        _gunIndex = 0;
+
+        EquipGun(guns[_gunIndex]);
+
     }
 
     private void Update()
@@ -30,11 +34,35 @@ public class GunOperator : MonoBehaviour
             _equippedGun.Reload();
         }
 
+        if (Input.GetButtonDown("Fire3"))
+        {
+            EquipNextGun();
+        }
+
+    }
+
+    private void EquipNextGun()
+    {
+
+        _gunIndex++;
+        if (_gunIndex >= guns.Count)
+        {
+            _gunIndex = 0;
+        }
+
+        EquipGun(guns[_gunIndex]);
+
     }
 
     private void EquipGun(GunBase gun)
     {
+
+        if (_equippedGun != null)
+            _equippedGun.gameObject.SetActive(false);
+
         _equippedGun = gun;
+        _equippedGun.gameObject.SetActive(true);
+
     }
 
 }

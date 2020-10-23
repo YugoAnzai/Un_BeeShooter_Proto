@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class BeePuller : MonoBehaviour
+public class BeePuller : BulletBase
 {
 
     [SerializeField] private float pullForce = 10;
@@ -21,11 +21,19 @@ public class BeePuller : MonoBehaviour
 
     private List<AttachingBee> _bees;
 
-    private void Update()
+    protected override void Update()
     {
-        
+
+        base.Update();
+
         PullUpdate();
 
+    }
+
+    protected override void Die()
+    {
+        _isMoving = false;
+        StartPull();
     }
 
     private void PullUpdate()
@@ -36,10 +44,15 @@ public class BeePuller : MonoBehaviour
 
         foreach(AttachingBee bee in _bees)
         {
+
+            if (bee == null)
+                return;
+            
             bee.AddForceToAttachedAtPos(
                 (transform.position - bee.transform.position)
                 * pullForce * Time.deltaTime
             );
+            
         }
 
         if (_pullCounter < 0)
@@ -81,8 +94,12 @@ public class BeePuller : MonoBehaviour
 
     public void EndPull()
     {
+
         _isPulling = false;
         _bees.Clear();
+
+        Destroy(gameObject);
+
     }
 
     private void OnDrawGizmos()
@@ -94,11 +111,14 @@ public class BeePuller : MonoBehaviour
         {
             foreach(AttachingBee bee in _bees)
             {
-                Gizmos.color = pulledBeesGizmoColor;
-                Gizmos.DrawWireSphere(bee.transform.position, 0.3f);
+
+                if (bee != null)
+                {
+                    Gizmos.color = pulledBeesGizmoColor;
+                    Gizmos.DrawWireSphere(bee.transform.position, 0.3f);
+                }
             }
         }
-
 
     }
 

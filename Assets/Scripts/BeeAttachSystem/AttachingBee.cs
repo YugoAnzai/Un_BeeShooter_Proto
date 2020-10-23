@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CountdownCaller))]
 public class AttachingBee : MonoBehaviour
 {
     
@@ -10,6 +11,16 @@ public class AttachingBee : MonoBehaviour
         _attachedRb = rb;
     }
 
+    public void MakeAliveForLifetime(float lifeTime)
+    {
+
+        GetComponent<CountdownCaller>().Countdown(
+            lifeTime,
+            Die
+        );
+
+    }
+
     public void AddForceToAttachedAtPos(Vector3 force)
     {
 
@@ -18,6 +29,11 @@ public class AttachingBee : MonoBehaviour
 
         _attachedRb.AddForceAtPosition(force, transform.position, ForceMode.Force);
 
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 
 }

@@ -8,6 +8,7 @@ public class BeeSpreaderParticleController : MonoBehaviour
 
     [AssetsOnly]
     [SerializeField] private GameObject beePrefab;
+    [SerializeField] float beeLifetime = 10;
 
     private ParticleSystem _particleSyst;
     private List<ParticleCollisionEvent> _collisionEvents;
@@ -37,6 +38,7 @@ public class BeeSpreaderParticleController : MonoBehaviour
             );
 
             bee.AttachToRigidBody(beeAttachable.Rb);
+            bee.MakeAliveForLifetime(beeLifetime);
 
         }
 
