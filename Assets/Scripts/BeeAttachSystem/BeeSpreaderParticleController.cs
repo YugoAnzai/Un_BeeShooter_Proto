@@ -45,8 +45,9 @@ public class BeeSpreaderParticleController : MonoBehaviour
     private AttachingBee CreateAttachingBee(Vector3 position, Vector3 normal, Transform beeParent)
     {
 
-        GameObject obj = Instantiate(beePrefab, position, Quaternion.identity, beeParent);
+        GameObject obj = Instantiate(beePrefab, position, Quaternion.identity);
 
+        obj.transform.parent = beeParent;
         obj.transform.forward = - normal;
 
         return obj.GetComponent<AttachingBee>();
