@@ -12,6 +12,20 @@ public class BeePullerGun : GunBase
 
     private BeePuller _curPuller;
 
+    public override bool TryStartShoot()
+    {
+
+        if (_curPuller != null)
+        {
+            _curPuller.ForceKill();
+            return true;
+        } else
+        {
+            return base.TryStartShoot();
+        }
+        
+    }
+
     protected override void ShootEffect()
     {
 
@@ -22,9 +36,18 @@ public class BeePullerGun : GunBase
         Debug.DrawRay(muzzle.position, muzzle.forward * bulletSpeed, 
             Color.yellow,0.2f);
 
-        _curPuller.SetVelocity(muzzle.forward * bulletSpeed);
-        _curPuller.SetLifetime(pullerLifetime);
+        _curPuller.StartupBullet(
+            muzzle.forward * bulletSpeed,
+            pullerLifetime
+        );
 
+        _curPuller.onDie += OnPullerDie;
+
+    }
+
+    private void OnPullerDie()
+    {
+        _curPuller = null;
     }
 
 }

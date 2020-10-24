@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using System.Collections;
 
 public class BeePuller : BulletBase
 {
@@ -16,7 +17,6 @@ public class BeePuller : BulletBase
     [SerializeField] private bool drawPulledBees = true;
     [SerializeField] private Color pulledBeesGizmoColor;
 
-    private float _pullCounter;
     private bool _isPulling;
 
     private List<AttachingBee> _bees;
@@ -30,16 +30,19 @@ public class BeePuller : BulletBase
 
     }
 
-    protected override void Die()
+    protected override void AfterDieEffect()
     {
-        _isMoving = false;
+
+        GetComponent<Rigidbody>().isKinematic = true;
+
         StartPull();
+
     }
 
     private void PullUpdate()
     {
 
-        if (! _isPulling)
+        if (!_isPulling)
             return;
 
         foreach(AttachingBee bee in _bees)
@@ -55,22 +58,16 @@ public class BeePuller : BulletBase
             
         }
 
-        if (_pullCounter < 0)
-        {
-            EndPull();
-        } else
-        {
-            _pullCounter -= Time.deltaTime;
-        }
-
     }
 
     [Button]
     public void StartPull()
     {
 
+        if (_isPulling)
+            return;
+
         _isPulling = true;
-        _pullCounter = pullTime;
         
         if (_bees == null)
             _bees = new List<AttachingBee>();
@@ -90,6 +87,14 @@ public class BeePuller : BulletBase
             }
         }
 
+        StartCoroutine(PullEndRoutine());
+
+    }
+
+    private IEnumerator PullEndRoutine()
+    {
+        yield return new WaitForSeconds(pullTime);
+        EndPull();
     }
 
     public void EndPull()

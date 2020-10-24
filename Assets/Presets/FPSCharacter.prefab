@@ -163,7 +163,7 @@ MonoBehaviour:
   range: 50
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 513
 --- !u!1 &1852308474
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 1852308478}
   - component: {fileID: 1852308477}
   - component: {fileID: 1852308476}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BeeSpreaderParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5225,7 +5225,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3639
+    m_Bits: 7735
   m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5325,9 +5325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guns:
-  - {fileID: 4967709772630914381}
-  - {fileID: 816035132}
   - {fileID: 1295528953}
+  - {fileID: 816035132}
+  - {fileID: 4967709772630914381}
 --- !u!1 &947559238857551359
 GameObject:
   m_ObjectHideFlags: 0
@@ -5447,7 +5447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2340778240750831454
 Transform:
   m_ObjectHideFlags: 0
@@ -5478,7 +5478,7 @@ MonoBehaviour:
   muzzle: {fileID: 5240590486986703177}
   maxAmmo: 1
   candencyDelay: 0.5
-  reloadDelay: 5
+  reloadDelay: 3
   pullerPrefab: {fileID: 596070538342649560, guid: 05b142178e6cc8d4986c6f4dcdde5952, type: 3}
   bulletSpeed: 10
   pullerLifetime: 3
@@ -5698,9 +5698,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1522407500301158467}
     m_Modifications:
+    - target: {fileID: 1281476349897218, guid: cb825447b7c1ef442a049949c3f95ba7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1888391163116910, guid: cb825447b7c1ef442a049949c3f95ba7, type: 3}
       propertyPath: m_Name
       value: SR_Scope_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888391163116910, guid: cb825447b7c1ef442a049949c3f95ba7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927399568385322, guid: cb825447b7c1ef442a049949c3f95ba7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4012160720677748, guid: cb825447b7c1ef442a049949c3f95ba7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5775,6 +5787,10 @@ PrefabInstance:
     - target: {fileID: 1547548502539076, guid: 75aeffeed5a736f46afbef3a42e93fab, type: 3}
       propertyPath: m_Name
       value: ELCAN
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547548502539076, guid: 75aeffeed5a736f46afbef3a42e93fab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4042994505972974, guid: 75aeffeed5a736f46afbef3a42e93fab, type: 3}
       propertyPath: m_LocalPosition.x
