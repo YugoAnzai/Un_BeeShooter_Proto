@@ -15,6 +15,11 @@ public class StingGun : GunBase
         if (Physics.Raycast(muzzle.position, muzzle.forward, out hit, range, layerMask))
         {
             Debug.Log(hit.collider.gameObject.name);
+            StingTarget target = hit.collider.GetComponent<StingTarget>();
+            if (target != null)
+            {
+                target.Stung();
+            }
         }
 
     }

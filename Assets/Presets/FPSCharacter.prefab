@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 2035338723}
-  maxAmmo: 100
-  candencyDelay: 0.02
+  maxAmmo: 200
+  candencyDelay: 0.01
   reloadDelay: 2
   beeSpreaderParticle: {fileID: 1852308476}
 --- !u!1 &1157362326
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 5240590486986703177}
-  maxAmmo: 10
+  maxAmmo: 20
   candencyDelay: 0.2
   reloadDelay: 1
   range: 50
@@ -413,8 +413,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 5
+      scalar: 15
+      minScalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5476,7 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 5240590486986703177}
-  maxAmmo: 1
+  maxAmmo: 3
   candencyDelay: 0.5
   reloadDelay: 3
   pullerPrefab: {fileID: 596070538342649560, guid: 05b142178e6cc8d4986c6f4dcdde5952, type: 3}
