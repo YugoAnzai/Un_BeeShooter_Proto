@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomPropertyDrawer (typeof (FsmCore.TransitionRule))]
+// [CustomPropertyDrawer (typeof (FsmCore.TransitionRule))]
 public class TransitionRuleDrawer : PropertyDrawer {
 
 	public override void OnGUI (Rect position, SerializedProperty property, GUIContent label) {

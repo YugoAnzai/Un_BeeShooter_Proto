@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomPropertyDrawer (typeof (FsmCore.StateEntity))]
+// [CustomPropertyDrawer (typeof (FsmCore.StateEntity))]
 public class StateEntityDrawer : PropertyDrawer {
 
 	public override void OnGUI (Rect position, SerializedProperty property, GUIContent label) {

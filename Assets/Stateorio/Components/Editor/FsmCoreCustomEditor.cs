@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor (typeof (FsmCore))]
+// [CustomEditor (typeof (FsmCore))]
 [CanEditMultipleObjects]
 public class FsmCoreCustomEditor : Editor {
 
