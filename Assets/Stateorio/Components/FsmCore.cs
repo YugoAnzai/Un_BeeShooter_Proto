@@ -24,19 +24,19 @@ public class FsmCore : MonoBehaviour {
 	[System.Serializable]
 	public class TransitionRule {
 		[Tooltip("State to go to.")]
-		[HorizontalGroup("NextGroup"), LabelWidth(40)]
+		[HorizontalGroup("NextGroup"), LabelWidth(25), LabelText("Nex")]
 		public FsmState Next;
 
 		[Tooltip("Condition on which the transition will happen.")]
-		[HorizontalGroup("CondGroup"), LabelWidth(40)]
+		[HorizontalGroup("CondGroup"), LabelWidth(25), LabelText("Con")]
 		public FsmCondition Cond;
 
-		[Tooltip("When multiple conditions are satisfied, transition with the largest priority will take place.")]
-		[HorizontalGroup("NextGroup", Width = 50), LabelWidth(30), LabelText("Prio")]
+		[Tooltip("Priority. When multiple conditions are satisfied, transition with the largest priority will take place.")]
+		[HorizontalGroup("NextGroup", Width = 30), LabelWidth(25), LabelText("Pri")]
 		public int Priority;
 
 		[Tooltip("If the transition should happen when the condition is not satisfied.")]
-		[HorizontalGroup("CondGroup", Width = 50), LabelWidth(30)]
+		[HorizontalGroup("CondGroup", Width = 30), LabelWidth(25)]
 		public bool Not;
 
 		[System.NonSerialized]
