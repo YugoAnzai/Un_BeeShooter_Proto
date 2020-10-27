@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 /// <summary>
 /// Component representing the Finite State Machine itself. This is the main component of the package.
@@ -23,15 +24,19 @@ public class FsmCore : MonoBehaviour {
 	[System.Serializable]
 	public class TransitionRule {
 		[Tooltip("State to go to.")]
+		[HorizontalGroup("NextGroup"), LabelWidth(40)]
 		public FsmState Next;
 
 		[Tooltip("Condition on which the transition will happen.")]
+		[HorizontalGroup("CondGroup"), LabelWidth(40)]
 		public FsmCondition Cond;
 
 		[Tooltip("When multiple conditions are satisfied, transition with the largest priority will take place.")]
+		[HorizontalGroup("NextGroup", Width = 50), LabelWidth(30), LabelText("Prio")]
 		public int Priority;
 
 		[Tooltip("If the transition should happen when the condition is not satisfied.")]
+		[HorizontalGroup("CondGroup", Width = 50), LabelWidth(30)]
 		public bool Not;
 
 		[System.NonSerialized]
