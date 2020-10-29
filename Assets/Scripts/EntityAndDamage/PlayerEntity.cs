@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Player : Entity
+public class PlayerEntity : Entity
 {
 
     public Action onHeal;

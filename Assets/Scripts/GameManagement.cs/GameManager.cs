@@ -1,9 +1,12 @@
 using UnityEngine;
+using YugoA.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
+
+    public SimpleSceneLoader sceneLoader;
 
     private GameObject _player;
 
@@ -22,6 +25,14 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        Player.GetComponent<PlayerEntity>().onDie += Defeat;
+    }
 
+    private void Defeat(Entity entity)
+    {
+        sceneLoader.ReloadThisScene();
+    }
 
 }
