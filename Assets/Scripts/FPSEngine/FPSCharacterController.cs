@@ -26,7 +26,7 @@ public class FPSCharacterController : MonoBehaviour
     
     float _verticalAngle, _horizontalAngle;
 
-    CharacterController _CharacterController;
+    CharacterController _characterController;
 
     bool _grounded;
     float _groundedTimer;
@@ -39,7 +39,7 @@ public class FPSCharacterController : MonoBehaviour
 
     public bool Grounded => _grounded;
 
-    void Start()
+    void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -50,7 +50,7 @@ public class FPSCharacterController : MonoBehaviour
         mainCamera.transform.SetParent(cameraPosition, false);
         mainCamera.transform.localPosition = Vector3.zero;
         mainCamera.transform.localRotation = Quaternion.identity;
-        _CharacterController = GetComponent<CharacterController>();
+        _characterController = GetComponent<CharacterController>();
         _verticalAngle = 0.0f;
         _horizontalAngle = transform.localEulerAngles.y;
     }
@@ -89,7 +89,7 @@ public class FPSCharacterController : MonoBehaviour
             
             move = move * usedSpeed * Time.deltaTime;            
             move = transform.TransformDirection(move);
-            _CharacterController.Move(move);
+            _characterController.Move(move);
             
             // Turn player
             float turnPlayer =  Input.GetAxis("Mouse X") * mouseSensitivity;
@@ -119,7 +119,7 @@ public class FPSCharacterController : MonoBehaviour
             _verticalSpeed = - maxFallSpeed; // max fall speed
         
         var verticalMove = new Vector3(0, _verticalSpeed * Time.deltaTime, 0);
-        var flag = _CharacterController.Move(verticalMove);
+        var flag = _characterController.Move(verticalMove);
         if ((flag & CollisionFlags.Below) != 0)
             _verticalSpeed = 0;
 
@@ -159,7 +159,7 @@ public class FPSCharacterController : MonoBehaviour
     {
         bool loosedGrounding = false;
 
-        if (!_CharacterController.isGrounded)
+        if (!_characterController.isGrounded)
         {
             if (_grounded)
             {
@@ -178,6 +178,13 @@ public class FPSCharacterController : MonoBehaviour
         }
 
         return loosedGrounding;
+    }
+
+    public void Warp(Vector3 position)
+    {
+        _characterController.enabled = false;
+        transform.position = position;
+        _characterController.enabled = true;
     }
 
 }
