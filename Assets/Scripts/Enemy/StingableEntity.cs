@@ -3,7 +3,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
 
-public class StingableEntity : MonoBehaviour
+public class StingableEntity : Entity
 {
 
     [SerializeField]
@@ -12,11 +12,10 @@ public class StingableEntity : MonoBehaviour
     private int _targetQuantity;
     private int _stungTargetQuantity;
 
-    private bool _isAlive = true;
-
-    private void Awake()
+    protected override void Awake()
     {
         SetupStingableTargets();
+        base.Awake();
     }
 
     [Button]
@@ -35,23 +34,20 @@ public class StingableEntity : MonoBehaviour
             _targetQuantity++;
         }
 
+        totalHp = _targetQuantity;
+
     }
 
     private void OnTargetStung()
     {
 
-        _stungTargetQuantity++;
-
-        if (_stungTargetQuantity == _targetQuantity)
-        {
-            Die();
-        }
+        Damage(1, false);
 
     }
 
-    private void Die()
+    protected override void Die()
     {
-        _isAlive = false;
+        base.Die();
         Destroy(gameObject);
     }
 
