@@ -9,16 +9,19 @@ using UnityEngine.AI;
 /// you will see it has two transition rules, one of which has a larger priority.
 /// This is important, if enemy doesn't see the player, he shouldn't be able to attack him.
 /// </summary>
-[RequireComponent (typeof (NavMeshAgent))]
+[RequireComponent (typeof (IPlayerGetter))]
 public class EnemyChasing : FsmState {
+
+	public override string StateName => "EnemyChasing";
 
 	public Transform Player;
 
-	private NavMeshAgent agent;
+	[SerializeField] private NavMeshAgent agent;
 	private Vector3 lastKnownLoc;
 
 	void Awake () {
-		agent = GetComponent<NavMeshAgent> ();
+		if(Player == null)
+			Player = GetComponent<IPlayerGetter>().GetPlayer().transform;
 	}
 	
 	// Update is called once per frame

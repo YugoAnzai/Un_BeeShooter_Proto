@@ -11,6 +11,8 @@ using UnityEngine.AI;
 /// </summary>
 public class EnemyDying : FsmState {
 
+	public override string StateName => "Dying";
+
 	public float FallSpeed;
 	public float RollSpeed;
 	public float Bottom;

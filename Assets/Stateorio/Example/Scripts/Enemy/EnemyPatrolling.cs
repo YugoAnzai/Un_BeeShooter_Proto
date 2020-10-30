@@ -7,19 +7,19 @@ using UnityEngine.AI;
 /// State in which the enemy goes through its patrol points.
 /// When transitioning back to this state, the enemy continues its patrol route where he left of.
 /// </summary>
-[RequireComponent (typeof (NavMeshAgent))]
 public class EnemyPatrolling : FsmState {
 
+	public override string StateName => "EnemyPatrolling";
+
+	[SerializeField] private NavMeshAgent agent;
 	public PatrolPoint[] Points;
 	public float Epsilon = 0.5f;
 
 	private int destPoint = 0;
-	private NavMeshAgent agent;
 
 	private Vector3? returnPoint = null;
 
 	void Awake () {
-		agent = GetComponent<NavMeshAgent> ();
 		if (Points.Length > 1) agent.autoBraking = false;
 	}
 

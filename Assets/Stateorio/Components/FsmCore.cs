@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEditor;
 
 /// <summary>
 /// Component representing the Finite State Machine itself. This is the main component of the package.
@@ -58,6 +59,16 @@ public class FsmCore : MonoBehaviour {
 		[Tooltip("List of transition rules leading away from this state.")]
 		public TransitionRule[] Transitions;
 	}
+
+	// _____DEBUG OPTIONS_____
+	[FoldoutGroup("Debug")]
+	public bool debug = false;
+
+	[FoldoutGroup("Debug")][ShowIf(nameof(debug))]
+	public Color debugLogColor;
+
+	[FoldoutGroup("Debug")][ShowIf(nameof(debug))]
+	public Vector3 handleOffset;
 
 	/// <summary>
 	/// The global state is a set of transition rules
@@ -171,6 +182,7 @@ public class FsmCore : MonoBehaviour {
 		if (current != null && current.State != null) {
 			current.State.OnStateLeave ();
 			current.State.enabled = false;
+			if(debug) YugoA.Helpers.LogHelper.Log($"Fsm Left State: {current.State.StateName}", debugLogColor);
 		}
 	}
 
@@ -178,6 +190,22 @@ public class FsmCore : MonoBehaviour {
 		if (current != null && current.State != null) {
 			current.State.enabled = true;
 			current.State.OnStateEnter ();
+			if(debug) YugoA.Helpers.LogHelper.Log($"Fsm Entered State : {current.State.StateName}", debugLogColor);
 		}
 	}
+
+	#region Debug Functions
+	private void OnDrawGizmos()
+	{
+		#if UNITY_EDITOR
+		if (debug)
+		{
+			if (current != null && current.State != null)
+				Handles.Label(transform.position + handleOffset, current.State.StateName);
+		}
+		#endif
+	}
+
+	#endregion
+
 }

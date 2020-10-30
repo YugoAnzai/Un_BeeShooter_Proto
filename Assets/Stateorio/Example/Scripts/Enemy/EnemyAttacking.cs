@@ -10,6 +10,8 @@ using UnityEngine;
 /// </summary>
 public class EnemyAttacking : FsmState {
 
+	public override string StateName => "EnemyAttacking";
+
 	public float Cooldown;
 	public int Strength;
 

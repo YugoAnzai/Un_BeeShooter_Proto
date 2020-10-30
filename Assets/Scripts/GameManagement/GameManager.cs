@@ -1,6 +1,7 @@
 using UnityEngine;
 using YugoA.SceneManagement;
 
+[RequireComponent(typeof(IPlayerGetter))]
 public class GameManager : MonoBehaviour
 {
 
@@ -8,21 +9,15 @@ public class GameManager : MonoBehaviour
 
     public SimpleSceneLoader sceneLoader;
 
-    private GameObject _player;
+    private IPlayerGetter _playerGetter;
 
-    public GameObject Player
-    {
-        get 
-        {
-            if (_player == null)
-                _player = GameObject.FindGameObjectWithTag("Player");
-            return _player;
-        }
-    }
+    public GameObject Player => _playerGetter.GetPlayer();
 
     private void Awake()
     {
         Instance = this;
+
+        _playerGetter = GetComponent<IPlayerGetter>();
     }
 
     private void Start()

@@ -13,6 +13,8 @@ using UnityEngine.AI;
 [RequireComponent (typeof (EnemyChasing))]
 public class EnemyAlerted : FsmState {
 
+	public override string StateName => "EnemyAlerted";
+
 	public float Epsilon = 0.5f;
 
 	private NavMeshAgent agent;

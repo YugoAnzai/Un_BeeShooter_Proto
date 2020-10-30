@@ -10,6 +10,8 @@ using UnityEngine;
 /// </summary>
 public abstract class FsmState : MonoBehaviour {
 
+	public virtual string StateName => "FsmState";
+
 	/// <summary>
 	/// Called just after the state is entered.
 	/// </summary>

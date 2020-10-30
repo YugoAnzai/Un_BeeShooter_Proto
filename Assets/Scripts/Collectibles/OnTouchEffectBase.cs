@@ -5,15 +5,17 @@ using YugoA.Helpers;
 public abstract class OnTouchEffectBase : MonoBehaviour
 {
 
+    public bool debug = false;
+
     protected virtual void OnTriggerEnter(Collider other)
     {
-        LogHelper.Log("Trigger Enter", Color.blue);
+        if (debug) LogHelper.Log("Trigger Enter", Color.blue);
         Effect(other.gameObject);
     }
 
     protected virtual void OnCollisionEnter(Collision other)
     {
-        LogHelper.Log("Collision Enter", Color.blue);
+        if (debug) LogHelper.Log("Collision Enter", Color.blue);
         Effect(other.gameObject);
     }
 
