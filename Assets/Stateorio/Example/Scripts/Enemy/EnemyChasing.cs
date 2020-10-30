@@ -15,6 +15,7 @@ public class EnemyChasing : FsmState {
 	public override string StateName => "EnemyChasing";
 
 	public Transform Player;
+	public float speed = 3;
 
 	[SerializeField] private NavMeshAgent agent;
 	private Vector3 lastKnownLoc;
@@ -27,6 +28,11 @@ public class EnemyChasing : FsmState {
 	// Update is called once per frame
 	void Update () {
 		agent.destination = lastKnownLoc = Player.position;
+	}
+
+	public override void OnStateEnter()
+	{
+		agent.speed = speed;
 	}
 
 	public override void OnStateLeave () {

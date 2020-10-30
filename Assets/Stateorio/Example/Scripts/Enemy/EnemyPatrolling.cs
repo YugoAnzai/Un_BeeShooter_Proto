@@ -12,6 +12,7 @@ public class EnemyPatrolling : FsmState {
 	public override string StateName => "EnemyPatrolling";
 
 	[SerializeField] private NavMeshAgent agent;
+	public float speed = 3;
 	public PatrolPoint[] Points;
 	public float Epsilon = 0.5f;
 
@@ -44,6 +45,7 @@ public class EnemyPatrolling : FsmState {
 
 	public override void OnStateEnter () {
 		gotoNextPoint ();
+		agent.speed = speed;
 	}
 
 	public override void OnStateLeave () {

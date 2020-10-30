@@ -1042,6 +1042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  speed: 8
   agent: {fileID: 1828427849}
 --- !u!114 &472645359
 MonoBehaviour:
@@ -1068,6 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1828427849}
+  speed: 3
   Points:
   - {fileID: 1218823516}
   - {fileID: 1246505007}
@@ -2779,6 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96dab7bb9778e147af32db5c1bf74dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   damage: 1
 --- !u!1001 &1482375989
 PrefabInstance:
