@@ -6,16 +6,10 @@ public class StingTarget : MonoBehaviour
 
     public Action onStung;
 
-    private bool _isAlive;
-
-    public void Stung()
+    public virtual void Stung()
     {
 
-        _isAlive = false;
-
         onStung?.Invoke();
-
-        Destroy(gameObject);
 
     }    
 

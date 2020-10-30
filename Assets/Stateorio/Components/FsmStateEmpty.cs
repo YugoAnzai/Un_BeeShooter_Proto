@@ -6,5 +6,7 @@ using UnityEngine;
 /// Implementation of FsmState in which nothing happens.
 /// Null can be used with the same effect.
 /// </summary>
-public class FsmStateEmpty : FsmState {
+public class FsmStateEmpty : FsmState
+{
+    public override string StateName => "FsmStateEmpty";
 }

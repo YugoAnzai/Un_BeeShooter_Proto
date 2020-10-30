@@ -7,7 +7,7 @@ public class StingableEntity : Entity
 {
 
     [SerializeField]
-    private List<StingTarget> _stingableTargets;
+    private List<StingHeart> _stingableHearts;
 
     private int _targetQuantity;
     private int _stungTargetQuantity;
@@ -21,14 +21,14 @@ public class StingableEntity : Entity
     [Button]
     public void FindStingableTargets()
     {
-        _stingableTargets = GetComponentsInChildren<StingTarget>().ToList();
+        _stingableHearts = GetComponentsInChildren<StingHeart>().ToList();
     }
 
     private void SetupStingableTargets()
     {
 
         _targetQuantity = 0;
-        foreach(StingTarget target in _stingableTargets)
+        foreach(StingHeart target in _stingableHearts)
         {
             target.onStung += OnTargetStung;
             _targetQuantity++;

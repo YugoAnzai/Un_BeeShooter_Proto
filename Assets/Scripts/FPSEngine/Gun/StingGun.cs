@@ -11,15 +11,18 @@ public class StingGun : GunBase
         
         Vector3 dir = muzzle.forward;
         Debug.DrawRay(muzzle.position, dir * range, Color.red, .4f);
+
         RaycastHit hit;
         if (Physics.Raycast(muzzle.position, muzzle.forward, out hit, range, layerMask))
         {
-            Debug.Log(hit.collider.gameObject.name);
+
+            YugoA.Helpers.LogHelper.Log($"StingGun Hit: {hit.collider.gameObject.name}", Color.red);
             StingTarget target = hit.collider.GetComponent<StingTarget>();
             if (target != null)
             {
                 target.Stung();
             }
+            
         }
 
     }
