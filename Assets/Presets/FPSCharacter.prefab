@@ -47,7 +47,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &816035131
 Transform:
   m_ObjectHideFlags: 0
@@ -77,9 +77,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 2035338723}
-  maxAmmo: 300
+  maxAmmo: 100
   candencyDelay: 0.01
-  reloadDelay: 2
+  reloadTime: 3
   beeSpreaderParticle: {fileID: 1852308476}
 --- !u!1 &1157362326
 GameObject:
@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1295528952
 Transform:
   m_ObjectHideFlags: 0
@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 5240590486986703177}
-  maxAmmo: 50
+  maxAmmo: 10
   candencyDelay: 0.2
-  reloadDelay: 1
+  reloadTime: 1
   debug: 1
   range: 50
   layerMask:
@@ -5495,7 +5495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2340778240750831454
 Transform:
   m_ObjectHideFlags: 0
@@ -5524,9 +5524,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 5240590486986703177}
-  maxAmmo: 50
+  maxAmmo: 3
   candencyDelay: 0.5
-  reloadDelay: 3
+  reloadTime: 4
   pullerPrefab: {fileID: 596070538342649560, guid: 05b142178e6cc8d4986c6f4dcdde5952, type: 3}
   bulletSpeed: 10
   pullerLifetime: 3

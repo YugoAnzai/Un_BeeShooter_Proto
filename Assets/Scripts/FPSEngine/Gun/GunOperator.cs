@@ -9,8 +9,15 @@ public class GunOperator : MonoBehaviour
     private GunBase _equippedGun;
     private int _gunIndex;
 
+    public GunBase EquippedGun => _equippedGun;
+
     private void Start()
     {
+
+        foreach(GunBase gun in guns)
+        {
+            gun.Unequip();
+        }
 
         _gunIndex = 0;
 
@@ -58,10 +65,10 @@ public class GunOperator : MonoBehaviour
     {
 
         if (_equippedGun != null)
-            _equippedGun.gameObject.SetActive(false);
+            _equippedGun.Unequip();
 
         _equippedGun = gun;
-        _equippedGun.gameObject.SetActive(true);
+        _equippedGun.Equip();
 
     }
 

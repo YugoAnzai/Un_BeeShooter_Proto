@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public abstract class GunBase : MonoBehaviour
@@ -7,7 +8,7 @@ public abstract class GunBase : MonoBehaviour
 
     [SerializeField] private int maxAmmo = 10;
     [SerializeField] private float candencyDelay = 0.5f;
-    [SerializeField] private float reloadDelay = 1;
+    [SerializeField] private float reloadTime = 1;
 
     private int _curAmmo;
     private bool _isReloading;
@@ -17,7 +18,16 @@ public abstract class GunBase : MonoBehaviour
     private float _candencyCounter;
     private float _reloadCounter;
 
+    // Events
+    public Action onEquipped;
+    public Action onUnequipped;
+
+    // Properties
     public int MaxAmmo => maxAmmo;
+    public int CurAmmo => _curAmmo;
+    public bool IsReloading => _isReloading;
+    public float ReloadTime => reloadTime;
+    public float ReloadCounter => _reloadCounter;
 
     protected virtual void Awake()
     {
@@ -127,13 +137,25 @@ public abstract class GunBase : MonoBehaviour
     public virtual void Reload()
     {
         _isReloading = true;
-        _reloadCounter = reloadDelay;
+        _reloadCounter = reloadTime;
     }
 
     protected virtual void Reloaded()
     {
         _isReloading = false;
         _curAmmo = maxAmmo;
+    }
+
+    public void Equip()
+    {
+        onEquipped?.Invoke();
+        gameObject.SetActive(true);
+    }
+
+    public void Unequip()
+    {
+        onUnequipped?.Invoke();
+        gameObject.SetActive(false);
     }
 
 }
