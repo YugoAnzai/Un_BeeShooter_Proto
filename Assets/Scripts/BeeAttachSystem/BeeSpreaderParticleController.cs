@@ -37,7 +37,7 @@ public class BeeSpreaderParticleController : MonoBehaviour
                 beeAttachable.GetBeeHolder()
             );
 
-            bee.AttachToRigidBody(beeAttachable.Rb);
+            bee.AttachTo(beeAttachable);
             bee.MakeAliveForLifetime(beeLifetime);
 
         }

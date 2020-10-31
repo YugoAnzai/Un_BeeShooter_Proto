@@ -146,6 +146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.31
@@ -197,6 +201,14 @@ PrefabInstance:
     - target: {fileID: 566256615547959136, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
@@ -780,6 +792,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.19
@@ -832,6 +848,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
 --- !u!1001 &364267264
@@ -841,6 +865,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.06
@@ -893,6 +921,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
 --- !u!1001 &402118815
@@ -902,6 +938,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 2066375916, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.11
@@ -950,6 +994,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeeTestCube (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
 --- !u!4 &416674952 stripped
@@ -987,9 +1039,12 @@ GameObject:
   - component: {fileID: 472645360}
   - component: {fileID: 472645358}
   - component: {fileID: 472645363}
+  - component: {fileID: 472645366}
   - component: {fileID: 472645357}
   - component: {fileID: 472645362}
   - component: {fileID: 472645364}
+  - component: {fileID: 472645365}
+  - component: {fileID: 472645367}
   m_Layer: 10
   m_Name: StateMachine
   m_TagString: Untagged
@@ -1031,7 +1086,7 @@ MonoBehaviour:
     m_Bits: 16384
   Player: {fileID: 0}
   drawGizmo: 1
-  gizmoColor: {r: 0.8867924, g: 0.6399964, b: 0.6399964, a: 0.1764706}
+  gizmoColor: {r: 0.8867924, g: 0.6399964, b: 0.6399964, a: 0.02745098}
 --- !u!114 &472645358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,12 +1148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 1
-  debugLogColor: {r: 0.63975614, g: 0.7924528, b: 0.63171947, a: 1}
+  debugLogColor: {r: 0.7819685, g: 0.8207547, b: 0.6465379, a: 1}
   handleOffset: {x: 0, y: 0.5, z: 0}
   GlobalState:
   - Next: {fileID: 472645363}
     Cond: {fileID: 472645364}
-    Priority: 80
+    Priority: 40
+    Not: 0
+  - Next: {fileID: 472645366}
+    Cond: {fileID: 472645365}
+    Priority: 60
     Not: 0
   States:
   - State: {fileID: 472645360}
@@ -1118,6 +1177,12 @@ MonoBehaviour:
     - Next: {fileID: 472645360}
       Cond: {fileID: 472645362}
       Priority: 20
+      Not: 0
+  - State: {fileID: 472645366}
+    Transitions:
+    - Next: {fileID: 472645363}
+      Cond: {fileID: 472645367}
+      Priority: 10
       Not: 0
 --- !u!114 &472645362
 MonoBehaviour:
@@ -1145,6 +1210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 3
   agent: {fileID: 1828427849}
+  rb: {fileID: 1828427853}
 --- !u!114 &472645364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1224,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stingTarget: {fileID: 1828427851}
+--- !u!114 &472645365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472645355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dad9d09595945d4498ef6646177359b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeAttachable: {fileID: 1828427852}
+--- !u!114 &472645366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472645355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6feafebcde77844db8355f146ed1fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1828427849}
+--- !u!114 &472645367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472645355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d1e50d1ead1014ba5ebbc2bedc1c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeAttachable: {fileID: 1828427852}
 --- !u!1 &487289688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1569,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.81
@@ -1515,6 +1624,14 @@ PrefabInstance:
     - target: {fileID: 566256615547959136, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
@@ -2203,6 +2320,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.059999
@@ -2255,6 +2376,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
 --- !u!1001 &1298988260
@@ -2264,6 +2393,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.440001
@@ -2316,6 +2449,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
 --- !u!1001 &1299967823
@@ -2343,7 +2484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1852308474, guid: 5ea90720143bafd4d9618eae6022c02f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2035338722, guid: 5ea90720143bafd4d9618eae6022c02f, type: 3}
       propertyPath: m_Layer
@@ -2384,6 +2525,10 @@ PrefabInstance:
     - target: {fileID: 947559238094178375, guid: 5ea90720143bafd4d9618eae6022c02f, type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 947559238094178393, guid: 5ea90720143bafd4d9618eae6022c02f, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 65079
       objectReference: {fileID: 0}
     - target: {fileID: 947559238840407553, guid: 5ea90720143bafd4d9618eae6022c02f, type: 3}
       propertyPath: m_Layer
@@ -2499,7 +2644,7 @@ GameObject:
   - component: {fileID: 1307338264}
   - component: {fileID: 1307338269}
   m_Layer: 9
-  m_Name: Cube (1)
+  m_Name: PlateTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2533,6 +2678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beesHolder: {fileID: 0}
+  checkPullInterval: 0.5
+  debug: 0
+  debugLogColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!54 &1307338265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2542,8 +2690,8 @@ Rigidbody:
   m_GameObject: {fileID: 1307338262}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2787,7 +2935,7 @@ GameObject:
   - component: {fileID: 1382799965}
   - component: {fileID: 1382799966}
   - component: {fileID: 1382799967}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,6 +2990,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529475713}
     m_Modifications:
+    - target: {fileID: 566256615547959067, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566256615547959071, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.690001
@@ -2893,6 +3045,14 @@ PrefabInstance:
     - target: {fileID: 566256615547959136, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
@@ -3128,6 +3288,8 @@ GameObject:
   - component: {fileID: 1828427850}
   - component: {fileID: 1828427849}
   - component: {fileID: 1828427851}
+  - component: {fileID: 1828427853}
+  - component: {fileID: 1828427852}
   m_Layer: 10
   m_Name: GroundBug
   m_TagString: Untagged
@@ -3199,27 +3361,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c143105e136f74996d71977ecb5f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1889784299 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 566256615547959136, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
-  m_PrefabInstance: {fileID: 566256615798615007}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1889784300
+--- !u!114 &1828427852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889784299}
+  m_GameObject: {fileID: 1828427847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc8d2b83a7cd1f749ab132c0fa8c93fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fdb93dc7dd57cf41aa7f6b42ed16f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHp: 1
-  invincibilityTime: 0.5
-  _stingableHearts:
-  - {fileID: 2066375917}
+  beesHolder: {fileID: 0}
+  checkPullInterval: 0.5
+  debug: 1
+  debugLogColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!54 &1828427853
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828427847}
+  serializedVersion: 2
+  m_Mass: 0.4
+  m_Drag: 2
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &1890947024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4636159339636702, guid: b5b92f002d820104c84d7890e92da26b, type: 3}
@@ -3343,114 +3516,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022657191}
   m_CullTransparentMesh: 0
---- !u!1 &2066375915
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2066375916}
-  - component: {fileID: 2066375920}
-  - component: {fileID: 2066375919}
-  - component: {fileID: 2066375918}
-  - component: {fileID: 2066375917}
-  m_Layer: 9
-  m_Name: StingHeart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2066375916
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066375915}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.56, z: 0.03}
-  m_LocalScale: {x: 0.59488, y: 0.59488, z: 0.59488}
-  m_Children: []
-  m_Father: {fileID: 286743744}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2066375917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066375915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5683ba4859a3f1b4aae2e9859e1b80d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &2066375918
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066375915}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2066375919
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066375915}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 65fcc57a3e28e0d49988f8c5a173b67a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2066375920
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066375915}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &280077949019913770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3578,6 +3643,14 @@ PrefabInstance:
     - target: {fileID: 566256615547959136, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
       propertyPath: m_Name
       value: BeeTestCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616049251981156108, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985db921751e43145b5535e9f2b4f40f, type: 3}

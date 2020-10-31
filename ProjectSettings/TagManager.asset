@@ -17,10 +17,10 @@ TagManager:
   - World
   - Enemy
   - AttachingBee
-  - Bullet
+  - PlayerBullet
   - Collectibles
   - Player
-  - 
+  - EnemyBullet
   - 
   - 
   - 

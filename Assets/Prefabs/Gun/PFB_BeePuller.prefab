@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5d57e8dfaa27843a80fa9ab9b7a18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pullForce: 6
+  pullForce: 8
   pullTime: 3
   pullRadius: 20
   gizmoColor: {r: 0.027450997, g: 0.35106546, b: 0.62352943, a: 0.45490196}

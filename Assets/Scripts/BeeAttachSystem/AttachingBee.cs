@@ -4,11 +4,11 @@ using UnityEngine;
 public class AttachingBee : MonoBehaviour
 {
     
-    private Rigidbody _attachedRb;
+    private BeeAttachable _beeAttachable;
 
-    public void AttachToRigidBody(Rigidbody rb)
+    public void AttachTo(BeeAttachable beeAttachable)
     {
-        _attachedRb = rb;
+        _beeAttachable = beeAttachable;
     }
 
     public void MakeAliveForLifetime(float lifeTime)
@@ -24,10 +24,11 @@ public class AttachingBee : MonoBehaviour
     public void AddForceToAttachedAtPos(Vector3 force)
     {
 
-        if (_attachedRb == null)
+        if (_beeAttachable == null)
             return;
 
-        _attachedRb.AddForceAtPosition(force, transform.position, ForceMode.Force);
+        _beeAttachable.SetPulledThisFrame();
+        _beeAttachable.Rb.AddForceAtPosition(force, transform.position, ForceMode.Force);
 
     }
 
