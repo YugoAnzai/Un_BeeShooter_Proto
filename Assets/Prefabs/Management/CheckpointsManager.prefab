@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280077948416604873}
   - component: {fileID: 280077948416604878}
+  - component: {fileID: 2180819565327315493}
   m_Layer: 0
   m_Name: CheckpointsManager
   m_TagString: Untagged
@@ -46,3 +47,15 @@ MonoBehaviour:
   checkPoints: []
   lastSceneNameKey: {fileID: 11400000, guid: d5d46429244ba434c86260e009f3e45c, type: 2}
   lastCheckpointIndexKey: {fileID: 11400000, guid: 51d647d87070f1047b6a33f7dfb10263, type: 2}
+--- !u!114 &2180819565327315493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280077948416604872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984a968f27be0ef44a7adfb0d4601364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

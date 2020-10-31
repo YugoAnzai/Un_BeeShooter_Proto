@@ -160,6 +160,7 @@ MonoBehaviour:
   maxAmmo: 50
   candencyDelay: 0.2
   reloadDelay: 1
+  debug: 1
   range: 50
   layerMask:
     serializedVersion: 2
@@ -5031,7 +5032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 947559236971460059}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: CharacterRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5065,7 +5066,7 @@ GameObject:
   - component: {fileID: 947559237087286918}
   - component: {fileID: 947559237087286937}
   - component: {fileID: 7902239944914878925}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WeaponCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5172,7 +5173,7 @@ GameObject:
   - component: {fileID: 947559238094178393}
   - component: {fileID: 947559238094178374}
   - component: {fileID: 1578927015263444216}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -5225,7 +5226,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32311
+    m_Bits: 65079
   m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5287,7 +5288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 947559238840407552}
   - component: {fileID: 3198669853780444630}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: WeaponPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5340,7 +5341,7 @@ GameObject:
   - component: {fileID: 947559238857551346}
   - component: {fileID: 947559238857551358}
   - component: {fileID: 401364448}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FPSCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5425,7 +5426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8362152973435547216}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5540,7 +5541,7 @@ GameObject:
   - component: {fileID: 4115777991174298459}
   - component: {fileID: 4005639256935181734}
   - component: {fileID: 8777990106685940708}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5622,7 +5623,7 @@ GameObject:
   - component: {fileID: 4716511815415664387}
   - component: {fileID: 3065192846775371604}
   - component: {fileID: 1696358520}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Collector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5669,6 +5670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7eb6bed168ac44adb2d18b624b6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
 --- !u!54 &1696358520
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5694,7 +5696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5240590486986703177}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
