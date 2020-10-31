@@ -4,6 +4,8 @@ using UnityEngine;
 public abstract class GunBase : MonoBehaviour
 {
 
+    public bool debug = true;
+
     [SerializeField] protected Transform muzzle;
 
     [SerializeField] private int maxAmmo = 10;
