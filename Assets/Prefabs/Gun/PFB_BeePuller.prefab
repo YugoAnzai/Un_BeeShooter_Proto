@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5d57e8dfaa27843a80fa9ab9b7a18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   pullForce: 8
   pullTime: 3
   pullRadius: 20
