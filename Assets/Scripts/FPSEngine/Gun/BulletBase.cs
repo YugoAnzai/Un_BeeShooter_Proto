@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
+using YugoA.Helpers;
 
 [RequireComponent(typeof(CountdownCaller))]
 public class BulletBase : MonoBehaviour
 {
+
+    public bool debug = true;
 
     public Action onHit;
     public Action onTimeout;
@@ -40,13 +43,25 @@ public class BulletBase : MonoBehaviour
     protected virtual void Hit(GameObject otherObj, Vector3 position)
     {
 
+        if (debug) LogHelper.Log($"Bullet Hit Start: {otherObj.name} in {position}", Color.blue);
+
         if(!_isAlive)
             return;
+
+        if(!IsValidTarget(otherObj))
+            return;
+
+        if (debug) LogHelper.Log($"Bullet Hit Confirm: {otherObj.name}", Color.blue);
 
         onHit?.Invoke();
 
         Die();
 
+    }
+
+    protected virtual bool IsValidTarget(GameObject hitObj)
+    {
+        return true;
     }
 
     protected virtual void OnTimeout()
