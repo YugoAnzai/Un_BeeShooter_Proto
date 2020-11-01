@@ -2126,9 +2126,5 @@ PrefabInstance:
       propertyPath: checkPoints.Array.data[2]
       value: 
       objectReference: {fileID: 611273434}
-    - target: {fileID: 6244629252648036299, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
-      propertyPath: EmissionModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
