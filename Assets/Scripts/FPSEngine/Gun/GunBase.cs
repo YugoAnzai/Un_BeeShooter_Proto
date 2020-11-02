@@ -23,6 +23,9 @@ public abstract class GunBase : MonoBehaviour
     // Events
     public Action onEquipped;
     public Action onUnequipped;
+    public Action onShot;
+    public Action onReloadStart;
+    public Action onReloaded;
 
     // Properties
     public int MaxAmmo => maxAmmo;
@@ -120,6 +123,8 @@ public abstract class GunBase : MonoBehaviour
 
         _candencyCounter = candencyDelay;
 
+        onShot?.Invoke();
+
         ShootEffect();
 
     }
@@ -140,12 +145,18 @@ public abstract class GunBase : MonoBehaviour
     {
         _isReloading = true;
         _reloadCounter = reloadTime;
+
+        onReloadStart?.Invoke();
+
     }
 
     protected virtual void Reloaded()
     {
         _isReloading = false;
         _curAmmo = maxAmmo;
+
+        onReloaded?.Invoke();
+
     }
 
     public void Equip()
