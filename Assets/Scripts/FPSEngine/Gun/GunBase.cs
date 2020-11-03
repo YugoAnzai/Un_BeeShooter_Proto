@@ -7,6 +7,7 @@ public abstract class GunBase : MonoBehaviour
     public bool debug = true;
 
     [SerializeField] protected Transform muzzle;
+    [SerializeField] protected GameObject visuals;
 
     [SerializeField] private int maxAmmo = 10;
     [SerializeField] private float candencyDelay = 0.5f;
@@ -162,13 +163,13 @@ public abstract class GunBase : MonoBehaviour
     public void Equip()
     {
         onEquipped?.Invoke();
-        gameObject.SetActive(true);
+        visuals.gameObject.SetActive(true);
     }
 
     public void Unequip()
     {
         onUnequipped?.Invoke();
-        gameObject.SetActive(false);
+        visuals.gameObject.SetActive(false);
     }
 
 }

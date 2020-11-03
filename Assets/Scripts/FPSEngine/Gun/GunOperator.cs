@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +7,26 @@ public class GunOperator : MonoBehaviour
 
     public List<GunBase> guns;
 
+    [SerializeField] private float changeDisableDelay = .2f;
+
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private string changeGunTrigger;
+
     private GunBase _equippedGun;
     private int _gunIndex;
 
+    private bool changeDisabled = false;
+    private AnimatorHelper _animHelper;
+
+    private GunBase _gunToEquipMemory;
+
     public GunBase EquippedGun => _equippedGun;
+
+    private void Awake()
+    {
+        _animHelper = animator.GetComponent<AnimatorHelper>();
+    }
 
     private void Start()
     {
@@ -21,13 +38,23 @@ public class GunOperator : MonoBehaviour
 
         _gunIndex = 0;
 
-        EquipGun(guns[_gunIndex]);
+        StartEquipGun(guns[_gunIndex]);
 
     }
 
     private void Update()
     {
-        
+
+        ActionsUpdate();
+
+    }
+
+    private void ActionsUpdate()
+    {
+
+        if (changeDisabled)
+            return;
+
         if (Input.GetButtonDown("Fire1"))
         {
             _equippedGun.TryStartShoot();
@@ -57,19 +84,44 @@ public class GunOperator : MonoBehaviour
             _gunIndex = 0;
         }
 
-        EquipGun(guns[_gunIndex]);
+        StartEquipGun(guns[_gunIndex]);
 
     }
 
-    private void EquipGun(GunBase gun)
+    private void StartEquipGun(GunBase gun)
+    {
+
+        _gunToEquipMemory = gun;
+        _animHelper.action += EquipGunFromMemory;
+        AnimateGunChange();
+
+        changeDisabled = true;
+        StartCoroutine(ChangeDisabledRestoreRoutine());
+
+    }
+
+    private void EquipGunFromMemory()
     {
 
         if (_equippedGun != null)
             _equippedGun.Unequip();
 
-        _equippedGun = gun;
+        _equippedGun = _gunToEquipMemory;
         _equippedGun.Equip();
 
+        _gunToEquipMemory = null;
+
+    }
+
+    IEnumerator ChangeDisabledRestoreRoutine()
+    {
+        yield return new WaitForSeconds(changeDisableDelay);
+        changeDisabled = false;
+    }
+
+    private void AnimateGunChange()
+    {
+        animator.SetTrigger(changeGunTrigger);
     }
 
 }

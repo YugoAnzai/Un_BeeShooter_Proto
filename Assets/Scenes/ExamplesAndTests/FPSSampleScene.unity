@@ -2066,9 +2066,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353410187552185174, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5532324673256262098, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6244629251494151917, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
       propertyPath: m_Name
@@ -2120,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6244629251889113357, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6244629252563515292, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
       propertyPath: checkPoints.Array.data[0]
