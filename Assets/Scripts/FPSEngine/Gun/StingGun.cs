@@ -1,6 +1,7 @@
 using UnityEngine;
 using YugoA.Helpers;
 using Sirenix.OdinInspector;
+using DG.Tweening;
 
 public class StingGun : GunBase
 {
@@ -11,6 +12,7 @@ public class StingGun : GunBase
     [SerializeField] private Transform visualLineMuzzle;
     [AssetsOnly]
     [SerializeField] private GameObject linePrefab;
+    [SerializeField] private float alphaFadeTime = .2f;
 
     protected override void ShootEffect()
     {
@@ -56,6 +58,18 @@ public class StingGun : GunBase
             renderer.enabled = true;
             renderer.SetPosition(0,startPos);
             renderer.SetPosition(1,endPos);
+
+            Color startColorAlpha = renderer.startColor;
+            Color endColorAlpha = renderer.endColor;
+            startColorAlpha.a = 0;
+            endColorAlpha.a = 0;
+
+            renderer.DOColor(
+                new Color2(renderer.startColor, renderer.endColor),
+                new Color2(startColorAlpha, endColorAlpha),
+                alphaFadeTime
+            );
+
         }
 
     }

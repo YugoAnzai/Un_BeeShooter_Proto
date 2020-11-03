@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAsComponent: 1
   startOnAwake: 1
-  componentCountdown: 0.1
+  componentCountdown: 0.2
   unityEvent:
     m_PersistentCalls:
       m_Calls:
