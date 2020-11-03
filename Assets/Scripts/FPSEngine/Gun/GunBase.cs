@@ -15,6 +15,7 @@ public abstract class GunBase : MonoBehaviour
 
     private int _curAmmo;
     private bool _isReloading;
+    private bool _isInCadency;
     private bool _isShooting;
     private bool _wasShooting;
 
@@ -45,6 +46,7 @@ public abstract class GunBase : MonoBehaviour
         
         IsShootingUpdate();
 
+        CadencyUpdate();
         ReloadUpdate();
 
         _wasShooting = _isShooting;
@@ -61,13 +63,22 @@ public abstract class GunBase : MonoBehaviour
             Shoot();
         } else
         {
-            if (_candencyCounter < 0)
+            if (!_isInCadency)
             {
                 Shoot();
-            } else
-            {
-                _candencyCounter -= Time.deltaTime;
             }
+        }
+
+    }
+
+    private void CadencyUpdate()
+    {
+        if (!_isInCadency)
+            return;
+        
+        if ((_candencyCounter -= Time.deltaTime) < 0)
+        {
+            _isInCadency = false;
         }
 
     }
@@ -78,12 +89,9 @@ public abstract class GunBase : MonoBehaviour
         if (!_isReloading)
             return;
 
-        if (_reloadCounter < 0)
+        if ((_reloadCounter -= Time.deltaTime) < 0)
         {
             Reloaded();
-        } else 
-        {
-            _reloadCounter -= Time.deltaTime;
         }
 
     }
@@ -91,14 +99,14 @@ public abstract class GunBase : MonoBehaviour
     public virtual bool TryStartShoot()
     {
 
-        if (_curAmmo <= 0)
+        if (
+            _curAmmo <= 0 ||
+            _isInCadency ||
+            _isReloading ||
+            _isShooting
+        ) {
             return false;
-
-        if (_isReloading)
-            return false;
-
-        if (_isShooting)
-            return false;
+        }
 
         StartShoot();
 
@@ -123,6 +131,7 @@ public abstract class GunBase : MonoBehaviour
         _curAmmo--;
 
         _candencyCounter = candencyDelay;
+        _isInCadency = true;
 
         onShot?.Invoke();
 

@@ -60,7 +60,7 @@ public class GunOperator : MonoBehaviour
             _equippedGun.TryStartShoot();
         } else if (Input.GetButtonUp("Fire1"))
         {
-            _equippedGun.EndShoot();
+            _equippedGun?.EndShoot();
         }
 
         if (Input.GetButtonDown("Fire2"))
@@ -104,7 +104,10 @@ public class GunOperator : MonoBehaviour
     {
 
         if (_equippedGun != null)
+        {
+            _equippedGun.EndShoot();
             _equippedGun.Unequip();
+        }
 
         _equippedGun = _gunToEquipMemory;
         _equippedGun.Equip();
