@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Collections;
+using System;
 
 public class BeePuller : BulletBase
 {
@@ -18,6 +19,9 @@ public class BeePuller : BulletBase
     [SerializeField] private Color pulledBeesGizmoColor;
 
     private bool _isPulling;
+
+    // Events
+    public Action onStartPull;
 
     private List<AttachingBee> _bees;
 
@@ -86,6 +90,8 @@ public class BeePuller : BulletBase
                 _bees.Add(attachingBee);
             }
         }
+
+        onStartPull?.Invoke();
 
         StartCoroutine(PullEndRoutine());
 

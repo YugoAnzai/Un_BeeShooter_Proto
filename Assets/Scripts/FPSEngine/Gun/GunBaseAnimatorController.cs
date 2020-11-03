@@ -17,7 +17,6 @@ public class GunBaseAnimatorController : MonoBehaviour
     public UnityEvent onReloadStart;
     public UnityEvent onReloaded;
 
-
     private GunBase _gunBase;
 
     private void Awake()
