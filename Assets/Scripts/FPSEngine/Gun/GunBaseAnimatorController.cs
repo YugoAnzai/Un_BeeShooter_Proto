@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(GunBase))]
 public class GunBaseAnimatorController : MonoBehaviour
@@ -6,9 +7,16 @@ public class GunBaseAnimatorController : MonoBehaviour
     
     [SerializeField] private Animator animator;
 
+    [Header("Triggers")]
     [SerializeField] public string shotTrigger;
     [SerializeField] public string reloadStartTrigger;
     [SerializeField] public string reloadedTrigger;
+
+    [Header("Events")]
+    public UnityEvent onShot;
+    public UnityEvent onReloadStart;
+    public UnityEvent onReloaded;
+
 
     private GunBase _gunBase;
 
@@ -26,18 +34,20 @@ public class GunBaseAnimatorController : MonoBehaviour
     private void OnShot()
     {
         animator.SetTrigger(shotTrigger);
+        onShot?.Invoke();
     }
 
     private void OnReloadStart()
     {
         animator.SetTrigger(reloadStartTrigger);
+        onReloadStart?.Invoke();
     }
 
     private void OnReloaded()
     {
         animator.SetTrigger(reloadedTrigger);
+        onReloaded?.Invoke();
     }
-
 
     private void OnDestroy()
     {
