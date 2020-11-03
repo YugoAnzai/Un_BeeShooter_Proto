@@ -2066,6 +2066,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2122793576514826489, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.026
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122793576514826489, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122793576514826489, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122793576514826489, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532324673256262098, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6244629251494151917, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
       propertyPath: m_Name
       value: = COREGAMEPLAY =
@@ -2114,6 +2134,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6244629251889113357, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6244629252563515292, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
       propertyPath: checkPoints.Array.data[0]
       value: 
@@ -2126,5 +2150,9 @@ PrefabInstance:
       propertyPath: checkPoints.Array.data[2]
       value: 
       objectReference: {fileID: 611273434}
+    - target: {fileID: 6244629253171097550, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
+      propertyPath: candencyDelay
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f89b535fb57a94ea8e0799b08ce537, type: 3}
