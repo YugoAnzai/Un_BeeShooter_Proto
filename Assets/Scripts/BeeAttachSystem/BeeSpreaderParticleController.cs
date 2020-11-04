@@ -49,8 +49,8 @@ public class BeeSpreaderParticleController : MonoBehaviour
 
         GameObject obj = Instantiate(beePrefab, position, Quaternion.identity);
 
-        obj.transform.parent = beeParent;
         obj.transform.forward = - normal;
+        obj.transform.parent = beeParent;
 
         return obj.GetComponent<AttachingBee>();
 
