@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,7 @@ public class GunBaseAnimatorController : MonoBehaviour
     public UnityEvent onShot;
     public UnityEvent onReloadStart;
     public UnityEvent onReloaded;
+    public UnityEvent onEndShoot;
 
     protected GunBase _gunBase;
 
