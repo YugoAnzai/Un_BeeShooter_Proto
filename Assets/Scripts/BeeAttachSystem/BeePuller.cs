@@ -22,6 +22,7 @@ public class BeePuller : BulletBase
 
     // Events
     public Action onStartPull;
+    public Action onEndPull;
 
     private List<AttachingBee> _bees;
 
@@ -108,6 +109,8 @@ public class BeePuller : BulletBase
 
         _isPulling = false;
         _bees.Clear();
+
+        onEndPull?.Invoke();
 
         Destroy(gameObject);
 
