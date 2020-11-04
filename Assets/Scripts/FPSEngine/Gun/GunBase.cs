@@ -35,6 +35,7 @@ public abstract class GunBase : MonoBehaviour
     public bool IsReloading => _isReloading;
     public float ReloadTime => reloadTime;
     public float ReloadCounter => _reloadCounter;
+    public bool IsShooting => _isShooting;
 
     protected virtual void Awake()
     {

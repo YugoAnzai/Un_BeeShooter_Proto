@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class GunBaseAnimatorController : MonoBehaviour
 {
     
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
 
     [Header("Triggers")]
     [SerializeField] public string shotTrigger;
@@ -17,7 +17,7 @@ public class GunBaseAnimatorController : MonoBehaviour
     public UnityEvent onReloadStart;
     public UnityEvent onReloaded;
 
-    private GunBase _gunBase;
+    protected GunBase _gunBase;
 
     private void Awake()
     {
