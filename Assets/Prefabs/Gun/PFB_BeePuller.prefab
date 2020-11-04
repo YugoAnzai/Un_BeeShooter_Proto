@@ -93,7 +93,7 @@ MonoBehaviour:
   shakeTarget: {fileID: 7923182844883548588}
   shakeDuration: 5
   shakeStrength: 0.2
-  shakeVibrato: 8
+  shakeVibrato: 15
   shakeRandomness: 50
   popParticlesPrefab: {fileID: 58737590881458312, guid: d6b99a2328d4f7943ab76f011f357c5c, type: 3}
 --- !u!135 &710748786638694502
