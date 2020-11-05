@@ -55,6 +55,12 @@ public class FPSCharacterController : MonoBehaviour
         _horizontalAngle = transform.localEulerAngles.y;
     }
 
+    private void OnDestroy()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     void Update()
     {      
         bool wasGrounded = _grounded;

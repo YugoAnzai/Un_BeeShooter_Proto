@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class Entity : MonoBehaviour, IDamageable
 {
@@ -31,6 +32,7 @@ public class Entity : MonoBehaviour, IDamageable
         isAlive = true;
     }
 
+    [Button]
     public virtual bool Damage(int damage, bool considerInvincibility = true)
     {
         

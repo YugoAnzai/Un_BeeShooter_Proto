@@ -44,7 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582d621c6041c0f4dae4621d7caa0e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoader: {fileID: 1135258275827269448}
+  failScene:
+    sceneAsset: {fileID: 102900000, guid: a75fa2e697c870348b6a831db0bb1a30, type: 3}
+    scenePath: Assets/Scenes/MainLevelScene.unity
+  victoryScene:
+    sceneAsset: {fileID: 0}
+    scenePath: 
+  entitiesToKill: []
+  victoryDelay: 2
 --- !u!114 &1135258275643601004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,52 +64,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6858dead4a5b640a512e658fc0a65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1135258275827269449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1135258275827269447}
-  - component: {fileID: 1135258275827269448}
-  m_Layer: 0
-  m_Name: SimpleSceneLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1135258275827269447
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135258275827269449}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1135258276777296246}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1135258275827269448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135258275827269449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a425458e8f4193a48ac6a796ca66d573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneRef:
-    sceneAsset: {fileID: 102900000, guid: 78d7e92fd93ace8438d152e20e27ddfd, type: 3}
-    scenePath: Assets/Scenes/ExamplesAndTests/FPSSampleScene.unity
 --- !u!1 &1135258276777296247
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +93,6 @@ Transform:
   m_Children:
   - {fileID: 1135258277431719628}
   - {fileID: 1135258275643601006}
-  - {fileID: 1135258275827269447}
   - {fileID: 1135258276307548710}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -256,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6065859737891458379, guid: cb8aa9f44ce0d534d9902ac2a49cd3a9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6065859737891458379, guid: cb8aa9f44ce0d534d9902ac2a49cd3a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
