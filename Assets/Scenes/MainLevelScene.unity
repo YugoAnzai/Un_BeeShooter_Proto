@@ -6634,7 +6634,7 @@ PrefabInstance:
       objectReference: {fileID: 1501999883}
     - target: {fileID: 5882014093536914310, guid: b418a4d399057624b9c665a2225778c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.75
+      value: -214.375
       objectReference: {fileID: 0}
     - target: {fileID: 5882014093536914310, guid: b418a4d399057624b9c665a2225778c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6642,7 +6642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5882014093536914310, guid: b418a4d399057624b9c665a2225778c4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.15
+      value: 50.5
       objectReference: {fileID: 0}
     - target: {fileID: 5882014093536914310, guid: b418a4d399057624b9c665a2225778c4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7713,6 +7713,10 @@ PrefabInstance:
     - target: {fileID: 2181138435163889133, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
       propertyPath: m_Name
       value: AttachableTestCube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980983999900365699, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
+      propertyPath: m_Mass
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
@@ -17508,17 +17512,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 00000000
-  m_SelectedEdges:
-  - a: 0
-    b: 1
-  - a: 2
-    b: 0
-  - a: 1
-    b: 3
-  - a: 3
-    b: 2
-  m_SelectedVertices: 00000000010000000200000003000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &934789860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20358,7 +20354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143420250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -223.125, y: 0, z: 71.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 866530816}
@@ -27330,6 +27326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttachableTestCube (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7980983999900365699, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
+      propertyPath: m_Mass
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
 --- !u!4 &1334116952 stripped
@@ -32271,7 +32271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1643487491
 Transform:
   m_ObjectHideFlags: 0
@@ -44678,6 +44678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttachableTestCube (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7980983999900365699, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
+      propertyPath: m_Mass
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
 --- !u!4 &1961479532 stripped
@@ -45431,6 +45435,10 @@ PrefabInstance:
     - target: {fileID: 2181138435163889133, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
       propertyPath: m_Name
       value: AttachableTestCube (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980983999900365699, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
+      propertyPath: m_Mass
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
@@ -46333,6 +46341,10 @@ PrefabInstance:
     - target: {fileID: 2181138435163889133, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
       propertyPath: m_Name
       value: AttachableTestCube (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980983999900365699, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
+      propertyPath: m_Mass
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f11133bebb8f4a45b5abeaf865d89cb, type: 3}
